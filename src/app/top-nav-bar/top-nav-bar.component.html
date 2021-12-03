@@ -1,0 +1,17 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+<div class = "container">
+  <div class="navbar-brand">
+    <img src="../assets/imagenes/logoUpm.png" width="50" height="45" class="d-inline-block align-top" alt="">
+    UPM
+  </div>
+  <ul class="nav navbar-nav" routerLink="active">
+    <li class="nav-item"><a class="nav-link" id = "iniOp"  routerLink="inicio">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" id = "preferencesOp"  routerLink="preferencias">Preferencias</a></li>
+    <li class="nav-item"><a class="nav-link" id = "jugarOp"  routerLink="jugar">Jugar</a></li>
+    <li class="nav-item"><a class="nav-link" id = "recordOp"  routerLink="record">Record</a></li>
+    <li class="nav-item"><a class="nav-link" id="registro" routerLink="registro" *ngIf= "showLogin">Registro</a></li>
+    <li class="nav-item"><a class="nav-link" id = "login" routerLink="login" *ngIf= "showLogin">Login</a></li>
+    <li class="nav-item"><a class="nav-link"  routerLink="logout" *ngIf= "!showLogin">LogOut</a></li>
+  </ul>
+</div>
+</nav>

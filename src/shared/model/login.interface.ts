@@ -1,6 +1,4 @@
-export interface RegistroI{
-  name: string;
-  email: string;
-  password: string
-  repeatPass: string;
+export interface LoginI{
+  usuario: string;
+  password: string;
 }

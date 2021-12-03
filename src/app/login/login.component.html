@@ -1,0 +1,23 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../assets/imagenes/logoUpm.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm"   >
+      <input type="text" #usuario id="login" class="fadeIn second" name="login" placeholder="login" formControlName="usuario">
+      <input type="password" #password id="password" class="fadeIn third" name="login" placeholder="password" formControlName="password">
+      <input type="button" class="fadeIn fourth" value="Log In" (click)="onLogin(usuario.value,password.value)" [disabled] = "!loginForm.valid">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger" *ngIf="errorStatus">
+      <span>{{errorMsg}}</span>
+    </div>
+
+  </div>
+</div>
