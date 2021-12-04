@@ -1,9 +1,7 @@
 import {Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ApiService} from "../../shared/services/api.service";
-import {LoginI} from "../../shared/model/login.interface";
 import {Route, Router} from "@angular/router";
-import {ResponseI} from "../../shared/model/response.interface";
 import {LoginService} from "../../shared/services/login.service";
 
 @Component({

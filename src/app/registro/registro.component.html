@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../assets/imagenes/logoUpm.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="registroForm"   >
+      <input type="text" #usuario class="fadeIn second" name="login" placeholder="login" formControlName="usuario">
+      <input type="text" #email class="fadeIn second" name="login" placeholder="email" formControlName="email">
+      <input type="password" #password class="fadeIn third" name="login" placeholder="password" formControlName="password">
+      <input type="password" #repeatPassword class="fadeIn third" name="login" placeholder=" repeat password" formControlName="repeatPassword">
+      <input type="button" class="fadeIn fourth" value="Register" >
+    </form>
+
+    <!-- Remind Passowrd -->
+    <!--<div class="alert alert-danger" *ngIf="errorStatus">
+      <span>{{errorMsg}}</span>
+    </div>-->
+
+  </div>
+</div>

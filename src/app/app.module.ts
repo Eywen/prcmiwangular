@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+//import { RegistroComponent } from './registro/registro.component';
 //import { InicioComponent } from './inicio/inicio.component';
 //import { LoginComponent } from './login/login.component';
 
@@ -14,6 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
     AppComponent,
     TopNavBarComponent,
     routingComponents,
+    //RegistroComponent,
     //InicioComponent
     //LoginComponent
   ],
