@@ -9,6 +9,7 @@ import {LoginService} from "../../shared/services/login.service";
 export class TopNavBarComponent implements OnInit {
   constructor(public loginService:LoginService) { }
   showLogin:boolean = true;
+  showLogOut:boolean = false;
   ngOnInit(): void {
     console.log("loginService: "+ this.loginService.showLogin$);
 
@@ -20,9 +21,16 @@ export class TopNavBarComponent implements OnInit {
         }
         else  {
           this.showLogin = false;
+          this.showLogOut = true;
         }
       }, // funcion recepción valor
       (anerror) => alert (anerror)
     ) // subscribe
+  }
+
+  logOut(){
+    this.loginService.logout();
+    this.showLogOut = this.loginService.isLoggedIn();
+    this.showLogin = true;
   }
 }

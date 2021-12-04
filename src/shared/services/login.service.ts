@@ -31,4 +31,21 @@ export class LoginService {
   public stopShowLogin(): void {
     this._showLogin$.next(false);
   }
+
+  logout() {
+    sessionStorage.removeItem("token");
+  }
+
+  isLoggedIn() {
+    if (sessionStorage.getItem('token')) {
+      return true;
+    }
+    return false;
+  }
+
+  getAuthorizationToken() {
+    const currentUser = JSON.parse(<string>sessionStorage.getItem('token'));
+    return currentUser.token;
+  }
+
 }
