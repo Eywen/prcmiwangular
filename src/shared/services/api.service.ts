@@ -25,4 +25,9 @@ export class ApiService {
     let direccion = this.baseurl + "/users";
     return this.http.post<ResponseI>(direccion,form);
   }
+
+  verifyUsuarioRegister (usuario:string) {
+    let direccion = this.baseurl + "/users/" + usuario;
+    return this.http.get(direccion,{observe: 'response'});
+  }
 }
